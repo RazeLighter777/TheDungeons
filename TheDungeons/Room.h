@@ -25,5 +25,7 @@ struct Room : public sf::Drawable {
 	*/
 	virtual WorldInterface* getWorldInterface() = 0;
 	/*
+	updates the room.
 	*/
+	virtual void update() = 0;
 };
