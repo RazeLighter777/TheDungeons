@@ -24,4 +24,6 @@ struct Room : public sf::Drawable {
 	Returns a reference to the world the room is in.
 	*/
 	virtual WorldInterface* getWorldInterface() = 0;
+	/*
+	*/
 };
