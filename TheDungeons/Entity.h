@@ -7,11 +7,16 @@
 #include <fstream>
 #include <iostream>
 
+enum EntityProperty {
+	pHealth,
+	pAttack,
+	pWieght,
+};
 /*
 The entity interface is an interface for an obect that exists in the world. 
 */
 
-typedef int coord;
+typedef unsigned int coord;
 
 struct WorldInterface;
 struct Item;
@@ -52,13 +57,15 @@ struct Entity : public sf::Drawable {
 	*/
 	virtual void getItem(Item* item, Entity* sender) = 0;
 	/*
-	Event handler for sending a message.
+	Querys and returns a pointer to the property. Is nullptr if the property does not exist.
+	*/
+	virtual EntityProperty* queryProperty(EntityProperty prop) = 0;
+	/*
+	Sends a message string to the entity.
 	*/
 	virtual void getMessage(std::string msg, Entity* sender) = 0;
 	/*
 	Draws the entity on the map on some tile. The draw position will be multiplied by 16, each tile is 16x16 when rendered on the map.
 	*/
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) = 0;
-	/*
-	*/
 };

@@ -16,6 +16,12 @@
     <Filter Include="Header Files\Interfaces">
       <UniqueIdentifier>{b636ffa3-ebea-45c4-88a7-44c777c3ea32}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Interfaces\Factories">
+      <UniqueIdentifier>{1314943d-d0e3-4efc-891b-c14a6aeb5a6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interfaces\Game Objects">
+      <UniqueIdentifier>{491e6e80-9da0-4a3b-a136-e835006940f7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -30,14 +36,29 @@
     <ClInclude Include="GameServices.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
+    <ClInclude Include="WorldInterface.h">
       <Filter>Header Files\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFactory.h">
+      <Filter>Header Files\Interfaces\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemFactory.h">
+      <Filter>Header Files\Interfaces\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="RoomFactory.h">
+      <Filter>Header Files\Interfaces\Factories</Filter>
     </ClInclude>
     <ClInclude Include="Room.h">
-      <Filter>Header Files\Interfaces</Filter>
+      <Filter>Header Files\Interfaces\Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="Item.h">
-      <Filter>Header Files\Interfaces</Filter>
+      <Filter>Header Files\Interfaces\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\Interfaces\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +66,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TheDungeons.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

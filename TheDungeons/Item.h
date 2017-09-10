@@ -16,4 +16,8 @@ struct Item {
 	virtual sf::Sprite getSprite() = 0;
 
 	virtual std::string getDesc() = 0;
+
+	virtual double getWieght() = 0;
+
+	virtual long int getValue() = 0;
 };
